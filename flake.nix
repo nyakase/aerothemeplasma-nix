@@ -108,6 +108,7 @@
             layout-template = self.callPackage ./pkgs/aerothemeplasma/plasma/layout-template.nix {};
             seven-black = self.callPackage ./pkgs/aerothemeplasma/plasma/seven-black.nix {};
             shell = self.callPackage ./pkgs/aerothemeplasma/plasma/shell.nix {};
+            atpootb = self.callPackage ./pkgs/aerothemeplasma/plasma/atpootb.nix {};
 
             battery = self.callPackage ./pkgs/aerothemeplasma/plasmoids/battery.nix {};
             desktopcontainment = self.callPackage ./pkgs/aerothemeplasma/plasmoids/desktopcontainment.nix {};

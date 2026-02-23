@@ -36,7 +36,7 @@ in
       icons sounds
 
       authui7 color-scheme kvantum-windows7aero
-      layout-template seven-black
+      layout-template seven-black atpootb
 
       keyboardlayout win7showdesktop
       seventasks sevenstart aeroglassblur
