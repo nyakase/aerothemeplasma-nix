@@ -102,13 +102,13 @@
             icons = self.callPackage ./pkgs/aerothemeplasma/assets/icons.nix {};
             sounds = self.callPackage ./pkgs/aerothemeplasma/assets/sounds.nix {};
 
+            atpootb = self.callPackage ./pkgs/aerothemeplasma/plasma/atpootb.nix {};
             authui7 = self.callPackage ./pkgs/aerothemeplasma/plasma/authui7.nix {};
             color-scheme = self.callPackage ./pkgs/aerothemeplasma/plasma/color-scheme.nix {};
             kvantum-windows7aero = self.callPackage ./pkgs/aerothemeplasma/plasma/kvantum-windows7aero.nix {};
             layout-template = self.callPackage ./pkgs/aerothemeplasma/plasma/layout-template.nix {};
             seven-black = self.callPackage ./pkgs/aerothemeplasma/plasma/seven-black.nix {};
             shell = self.callPackage ./pkgs/aerothemeplasma/plasma/shell.nix {};
-            atpootb = self.callPackage ./pkgs/aerothemeplasma/plasma/atpootb.nix {};
 
             battery = self.callPackage ./pkgs/aerothemeplasma/plasmoids/battery.nix {};
             desktopcontainment = self.callPackage ./pkgs/aerothemeplasma/plasmoids/desktopcontainment.nix {};
