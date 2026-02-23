@@ -22,4 +22,8 @@ stdenv.mkDerivation {
   cmakeFlags = [
     "-DKAUTH_ACTIONS_QML=false"
   ];
+
+  meta = {
+    mainProgram = "atpootb";
+  };
 }
