@@ -6,7 +6,7 @@
   kdePackages,
 }:
 stdenv.mkDerivation {
-  pname = "aero-uac-polkit-agent";
+  pname = "aeroshell-uac-polkit-agent";
   src = aeroshell-uac-repo;
   version = "2026-02-25";
 
