@@ -26,6 +26,7 @@
     fonts.enable = true;
     plymouth.enable = true;
     sddm.enable = true;
+    polkit.enable = true;
   };
   programs = {
     sevulet.enable = true;

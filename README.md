@@ -60,6 +60,7 @@ aerothemeplasma = {
   fonts.enable = true;
   plymouth.enable = true;
   sddm.enable = true;
+  polkit.enable = true;
 };
 ```
 
