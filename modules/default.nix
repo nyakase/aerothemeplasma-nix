@@ -57,7 +57,7 @@ in
       themePackages = [ atpkgs.plymouthvista ];
     };
 
-    systemd.packages = with atpkgs; [
+    systemd.packages = with atpkgs; lib.optionals cfg.plasma.enable [
       uac-polkit-agent
     ];
 
