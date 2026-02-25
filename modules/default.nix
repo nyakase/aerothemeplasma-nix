@@ -57,6 +57,10 @@ in
       themePackages = [ atpkgs.plymouthvista ];
     };
 
+    systemd.packages = with atpkgs; [
+      uac-polkit-agent
+    ];
+
     services.displayManager.sddm = lib.mkIf cfg.sddm.enable {
       theme = "${atpkgs.sddm-theme-mod}/share/sddm/themes/sddm-theme-mod";
       extraPackages = [ pkgs.kdePackages.kitemmodels ];

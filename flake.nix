@@ -70,6 +70,13 @@
               rev = "c7e74773709e9d03a04e15d143867f4a89d849f4";
               hash = "sha256-qzgTgPB7bbI25fjmWlqSHFFDpFJKcqBpqOCWLyUANyk=";
             };
+            aeroshell-uac-repo = pkgs.fetchFromGitLab {
+              domain = "gitgud.io";
+              owner = "aeroshell";
+              repo = "uac-polkit-agent";
+              rev = "f284a37b688c0f57984fd1604c1134c2629a8028";
+              hash = "sha256-E+UV0cRZcrQNtFkDQXfQPxtayKkamzLybElLFLNc26o=";
+            };
             
             libplasma = self.callPackage ./pkgs/aeroshell/hacks/libplasma.nix {};
             plasma-workspace = self.callPackage ./pkgs/aeroshell/hacks/plasma-workspace.nix {};
@@ -118,6 +125,7 @@
 
             login-session = self.callPackage ./pkgs/aerothemeplasma/system/login-session.nix {};
             sddm-theme-mod = self.callPackage ./pkgs/aerothemeplasma/system/sddm-theme-mod.nix {};
+            uac-polkit-agent = self.callPackage ./pkgs/aerothemeplasma/system/uac-polkit-agent.nix {};
 
             segoe-ui = self.callPackage ./pkgs/external/fonts/segoe-ui.nix {};
             lucida-console = self.callPackage ./pkgs/external/fonts/lucida-console.nix {};
