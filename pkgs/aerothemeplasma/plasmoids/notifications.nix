@@ -13,6 +13,7 @@ stdenv.mkDerivation {
   preConfigure = "cd plasma/plasmoids/src/notifications_src";
   buildInputs = with kdePackages; [
     plasma-workspace
+    knotifyconfig
   ];
   nativeBuildInputs = [ cmake pkg-config kdePackages.wrapQtAppsHook ];
 }
