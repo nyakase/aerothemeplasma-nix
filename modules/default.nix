@@ -40,6 +40,8 @@ in
         enable = lib.mkEnableOption "AeroThemePlasma, a set of Plasma theme packages";
         plymouth.enable = lib.mkEnableOption "the PlymouthVista theme using the 7 style";
         plymouth.settings = lib.mkOption {
+          description = "Settings for the PlymouthVista theme. See [PlymouthVista's CONFIG.md](https://github.com/furkrn/PlymouthVista/blob/main/CONFIG.md#keys) for a full list, ones related to services are unsupported (except BootSlowdown).";
+          # "Why are they unsupported anyways?" Because they edit the Plymouth script at runtime, and since it is in the Nix store that's not happening. Maybe there is a hacky solution, but for now, ehh..
           type = lib.types.submodule {
             freeformType = with lib.types; attrsOf (oneOf [ str bool int ]);
             options.BootSlowdown = lib.mkOption {

@@ -36,4 +36,7 @@
     linver.enable = true;
     execbin.enable = true;
   };
+
+  # to avoid a repeat of https://github.com/nyakase/aerothemeplasma-nix/issues/24
+  documentation.nixos.includeAllModules = true;
 }
