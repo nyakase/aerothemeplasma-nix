@@ -3,7 +3,7 @@
 
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
   };
 
   outputs = inputs@{ flake-parts, ... }:
@@ -13,15 +13,6 @@
       flake.nixosModules.aerothemeplasma-nix = moduleWithSystem (
         perSystem@{ config }: import ./modules/default.nix perSystem
       );
-      flake.homeModules.aerothemeplasma-nix = throw ''
-        aerothemeplasma-nix's home-manager module has been removed for Plasma 6.6, as the theme
-        now comes with an "Out of the Box Experience" wizard that can configure itself. It is stabler
-        than attempting to enable AeroThemePlasma through plasma-manager, which has a few odd quirks.
-
-        Please remove aerothemeplasma from home-manager and read the README's configuration section again:
-        https://github.com/nyakase/aerothemeplasma-nix#configuration. You will see the wizard open on your 
-        next login. Note that plasma-manager settings could override the wizard's settings if conflicting. 
-      '';
 
       # This configuration is intended for testing,
       # please do not try to switch to it!

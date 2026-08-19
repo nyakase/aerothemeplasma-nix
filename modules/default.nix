@@ -10,19 +10,6 @@ let
   ) list;
 in
 {
-  # this is rather silly but if the options are dropped entirely the
-  # evaluation will fail and the consumer never gets the "we've moved"
-  # message, so keep these around until Plasma 6.7 or so
-  options.aerothemeplasma = {
-    enable = lib.mkEnableOption "nothing";
-    plasma.enable = lib.mkEnableOption "nothing";
-    fonts.enable = lib.mkEnableOption "nothing";
-    plymouth.enable = lib.mkEnableOption "nothing";
-    polkit.enable = lib.mkEnableOption "nothing";
-    sddm.enable = lib.mkEnableOption "nothing";
-  };
-  options.programs.sevulet.enable = lib.mkEnableOption "nothing";
-  
   options.programs = {
     aeroshell = rec {
       enable = lib.mkEnableOption "AeroShell";
@@ -63,29 +50,13 @@ in
     execbin.enable = lib.mkEnableOption "the ExecBin application";
   };
 
-  config = lib.mkIf (config.aerothemeplasma.enable || cfg.enable) {
+  config = lib.mkIf cfg.enable {
     assertions = [
       {
         assertion = cfg.aerothemeplasma.plymouth.enable -> cfg.fonts.segoe.enable;
         message = ''
           The Plymouth theme requires the Segoe font to be enabled.
           Like so: "programs.aeroshell.fonts.segoe.enable = true;"
-        '';
-      }
-      {
-        assertion = !config.aerothemeplasma.enable;
-        message = ''
-          The "aerothemeplasma" option set has been moved to "programs.aeroshell". This reflects 
-          the changes in Plasma 6.6, fits in better with other NixOS options, and is needed to add 
-          VistaThemePlasma in the future. Sorry for the trouble! For how the options work now, see:
-          https://github.com/nyakase/aerothemeplasma-nix#configuration
-        '';
-      }
-      {
-        assertion = !config.programs.sevulet.enable;
-        message = ''
-          The Sevulet software suite was deleted by its author and is no longer available. 
-          Please remove the "programs.sevulet.enable = true;" option from your configuration.
         '';
       }
       {

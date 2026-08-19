@@ -1,5 +1,5 @@
 # AeroThemePlasma on NixOS
-This [flake](https://wiki.nixos.org/wiki/Flakes) can be used to install [AeroThemePlasma](https://gitgud.io/wackyideas/aerothemeplasma) on a NixOS unstable system.
+This [flake](https://wiki.nixos.org/wiki/Flakes) can be used to install [AeroThemePlasma](https://gitgud.io/wackyideas/aerothemeplasma) on a NixOS 26.05 system. For unstable systems, [use the senpai branch](https://github.com/nyakase/aerothemeplasma-nix/tree/senpai).
 
 ![Demo of AeroThemePlasma on a running NixOS system](demo.png)
 
@@ -15,9 +15,9 @@ Add aerothemeplasma-nix as a flake input and NixOS module.
 # ./flake.nix
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     aerothemeplasma-nix = {
-      url = "github:nyakase/aerothemeplasma-nix";
+      url = "github:nyakase/aerothemeplasma-nix/26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
