@@ -17,6 +17,11 @@ stdenv.mkDerivation {
   preConfigure = ''
     substituteInPlace effects_cpp/${session}/aeroglide/src/{metadata.json,CMakeLists.txt} --replace-fail \
       "kwin_aeroglide_config" "kwin_aeroglide_${session}_config"
+  '' + lib.optionalString (session == "x11") ''
+    # on X11 whether the glide plays for plasmashell windows is reliant on this hardcoded
+    # window class, since patched plasmashell is built as aeroshell they were gliding :(
+    substituteInPlace effects_cpp/x11/aeroglide/src/glide.cpp --replace-fail \
+      '"plasmashell org.kde.plasmashell"' '"aeroshell plasmashell"'
   '';
   buildInputs = [ kdePackages.qttools wayland-protocols ]
     ++ lib.optionals (session == "x11") [ kdePackages.kwin-x11 ]
