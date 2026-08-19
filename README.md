@@ -1,5 +1,5 @@
 # AeroThemePlasma on NixOS
-This [flake](https://wiki.nixos.org/wiki/Flakes) can be used to install [AeroThemePlasma](https://gitgud.io/wackyideas/aerothemeplasma) on a NixOS unstable system.
+This [flake](https://wiki.nixos.org/wiki/Flakes) can be used to install [AeroThemePlasma](https://gitgud.io/wackyideas/aerothemeplasma) on a NixOS unstable system. For 26.05 systems, use the [26.05 branch](https://github.com/nyakase/aerothemeplasma-nix/tree/26.05).
 
 ![Demo of AeroThemePlasma on a running NixOS system](demo.png)
 
