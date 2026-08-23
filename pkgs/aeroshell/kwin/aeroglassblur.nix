@@ -11,7 +11,7 @@
 }:
 stdenv.mkDerivation {
   pname = "aeroshell-aeroglassblur-${session}";
-  version = if session == "wayland" then "2026-06-18" else "2026-06-21";
+  version = if session == "wayland" then "2026-08-08" else "2026-06-21";
   src = aeroshell-kwin-repo;
 
   preConfigure = ''
