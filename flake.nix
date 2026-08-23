@@ -67,13 +67,12 @@
 
             aeroglassblur = self.callPackage ./pkgs/aeroshell/kwin/aeroglassblur.nix {};
             aeroglide = self.callPackage ./pkgs/aeroshell/kwin/aeroglide.nix {};
-            default-rules = self.callPackage ./pkgs/aeroshell/kwin/default-rules.nix {};
             dimscreenaero = self.callPackage ./pkgs/aeroshell/kwin/dimscreenaero.nix {};
             fadingpopupsaero = self.callPackage ./pkgs/aeroshell/kwin/fadingpopupsaero.nix {};
             flip3d = self.callPackage ./pkgs/aeroshell/kwin/flip3d.nix {};
-            i18n-kwin = self.callPackage ./pkgs/aeroshell/kwin/i18n.nix {};
             launchfeedback = self.callPackage ./pkgs/aeroshell/kwin/launchfeedback.nix {};
             loginaero = self.callPackage ./pkgs/aeroshell/kwin/loginaero.nix {};
+            kwin-shared-data = self.callPackage ./pkgs/aeroshell/kwin/shared-data.nix {};
             smod = self.callPackage ./pkgs/aeroshell/kwin/smod.nix {};
             smodglow = self.callPackage ./pkgs/aeroshell/kwin/smodglow.nix {};
             smodsnap = self.callPackage ./pkgs/aeroshell/kwin/smodsnap.nix {};
