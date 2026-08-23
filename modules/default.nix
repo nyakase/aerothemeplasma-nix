@@ -84,8 +84,8 @@ in
     environment.systemPackages = with atpkgs; [
       pkgs.kdePackages.qtmultimedia libplasma plasma-workspace
 
-      dimscreenaero fadingpopupsaero flip3d i18n-kwin loginaero smod 
-      smodpeekeffect smodpeekscript squashaero thumbnail-aero thumbnails
+      dimscreenaero fadingpopupsaero flip3d loginaero smod smodpeekeffect 
+      kwin-shared-data smodpeekscript squashaero thumbnail-aero thumbnails
 
       kcmloader libaeroshellutils libshowdesktop libtaskmanager
     ] ++ withSessions (with atpkgs; [
