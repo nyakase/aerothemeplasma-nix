@@ -37,8 +37,8 @@
               domain = "gitgud.io";
               owner = "aeroshell";
               repo = "smod";
-              rev = "a972593cfbadc1fc41f3d8eb9ae3977f6171e8e0";
-              hash = "sha256-yozMlCvelwmCnluc3cdjamVzHqnQlQ/9gAGg90f2+d8=";
+              rev = "b93cffd1d06a34cb89223270fc6256d1ba557e22";
+              hash = "sha256-LB5uKwxmQHctZJHixhlcpg9Mp+SztnYPnuRX0l+9xoM=";
             };
             aeroshell-workspace-repo = pkgs.fetchFromGitLab {
               domain = "gitgud.io";
