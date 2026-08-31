@@ -51,8 +51,8 @@
               domain = "gitgud.io";
               owner = "aeroshell";
               repo = "atp/aerothemeplasma-icons";
-              rev = "96950b8028a5d960cb683280fe5f1d9e33e6b8a2";
-              hash = "sha256-7dfoGD3LQiBQ7/JeM1CwAZ+NNMaAJyAN/SaYIHZl1xg=";
+              rev = "0100536bb0fb4b731b6cf776f3bc6dc5d3c74bfc";
+              hash = "sha256-5tB52/IYB4oz3Zn3TPcSWLfdCLvYLRqxshbGzZyPHzE=";
             };
             aerothemeplasma-repo = pkgs.fetchFromGitLab {
               domain = "gitgud.io";
