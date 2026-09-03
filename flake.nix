@@ -58,8 +58,8 @@
               domain = "gitgud.io";
               owner = "aeroshell";
               repo = "atp/aerothemeplasma";
-              rev = "afaaa49dad2a9fc894e44e05caf2d5be75f85061";
-              hash = "sha256-l4QaCvka8LzKnx8y4/BFbNZnPKd2LVzaTIIKe1qZpFY=";
+              rev = "f724417af98ad75e8e001ae1711068e297904d4f";
+              hash = "sha256-Jq7aQ3S11edx/CJC3qJOchTDeWepI2XGpZ5/+FmaGy8=";
             };
             
             libplasma = self.callPackage ./pkgs/aeroshell/hacks/libplasma.nix {};

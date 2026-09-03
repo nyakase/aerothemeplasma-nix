@@ -4,7 +4,7 @@
 }:
 stdenvNoCC.mkDerivation {
   pname = "aerothemeplasma-color-scheme";
-  version = "2025-09-14";
+  version = "2026-09-02";
   src = aerothemeplasma-repo;
 
   dontUnpack = true;
