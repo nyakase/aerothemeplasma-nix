@@ -6,7 +6,7 @@
   cmake
 }:
 stdenv.mkDerivation {
-  name = "aeroshell-kwin-shared-data";
+  pname = "aeroshell-kwin-shared-data";
   version = "2026-04-03";
   src = aeroshell-kwin-repo;
   
