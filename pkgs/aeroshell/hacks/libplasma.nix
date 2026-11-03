@@ -1,21 +1,20 @@
 {
   kdePackages,
-  fetchFromGitLab,
+  fetchFromGitHub,
   fetchzip,
   runCommand,
   diffutils
 }:
 let
-  patch-source = fetchFromGitLab {
-    domain = "gitgud.io";
-    owner = "aeroshell";
+  patch-source = fetchFromGitHub {
+    owner = "aeroshell-desktop";
     repo = "libplasma";
-    rev = "bc48942bbd5aa7fc6d62b050701eabbe2b31e054";
-    hash = "sha256-MWbTvNlpat8eP3S158kdDMIR0N5MerpCPS7z2uyRGTc=";
+    rev = "c962fb360e5b8288b274a5294c14e8125c02aba0";
+    hash = "sha256-5rqTtJArFdTrN9nzaCpQmDLkPbhBTHFVX9PdhfXKfJ4=";
   };
   patch-target = fetchzip {
-    url = "mirror://kde/stable/plasma/6.8.0/libplasma-6.8.0.tar.xz";
-    hash = "sha256-zcBF1eObm0hir04ayFpx8v0HsZAE6zgKB05qN8/hvu4=";
+    url = "mirror://kde/stable/plasma/6.8.2/libplasma-6.8.2.tar.xz";
+    hash = "sha256-jXvADmf77Nb1O4HXnWxr8bLABAEXTkRsn7t1o8Jqpsc=";
   };
 in
 kdePackages.libplasma.overrideAttrs (oldAttrs: {
