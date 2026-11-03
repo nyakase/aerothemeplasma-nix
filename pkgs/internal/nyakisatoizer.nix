@@ -157,8 +157,7 @@ $targetCommitBody
           GH_TOKEN="$GHA_TOKEN" gh pr edit "$openPR" --title "$targetCommitMsg" --body "$PRbody"
         else
           echo "$target: making pull request.."
-          openPR=$(gh pr create --repo "$GITHUB_REPOSITORY" --title "$targetCommitMsg" --body "$PRbody")
-          GH_TOKEN="$GHA_TOKEN" gh pr edit "$openPR" --add-assignee @nyakase --add-reviewer @nyakase
+          GH_TOKEN="$GHA_TOKEN" gh pr create --repo "$GITHUB_REPOSITORY" --title "$targetCommitMsg" --body "$PRbody" --assignee @nyakase --reviewer @nyakase
         fi
       fi
 
