@@ -62,8 +62,8 @@
               domain = "gitgud.io";
               owner = "aeroshell";
               repo = "atp/aerothemeplasma";
-              rev = "c4a82b5c32338081676958cfb05815aa713ea6c5";
-              hash = "sha256-GA0DV0mwO//TPZrCgHO3E5m1dVcnIrZEmd/QmxDesfU=";
+              rev = "f51ca15f4668a81d908505b422e5d560f35fe241";
+              hash = "sha256-VqJVWRNbapfkCDsJGFx0NAuy3A0W34XXnam7HbMHIiU=";
               forceFetchGit = true;
             };
 
