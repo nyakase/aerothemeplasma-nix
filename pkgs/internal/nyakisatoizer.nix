@@ -143,7 +143,7 @@ writeShellApplication {
         git commit -m "$targetCommitMsg"
         git push origin HEAD --force-with-lease
 
-        openPR=$(gh pr list --repo "$GITHUB_REPOSITORY" --state open --author @nyakisato --head "update/$target" --json url --jq .[0].url)
+        openPR=$(gh pr list --repo "$GITHUB_REPOSITORY" --state open --author github-actions[bot] --head "update/$target" --json url --jq .[0].url)
         PRbody="
 Try this in the VM:
 \`\`\`bash
@@ -157,7 +157,7 @@ $targetCommitBody
           GH_TOKEN="$GHA_TOKEN" gh pr edit "$openPR" --title "$targetCommitMsg" --body "$PRbody"
         else
           echo "$target: making pull request.."
-          GH_TOKEN="$GHA_TOKEN" gh pr create --repo "$GITHUB_REPOSITORY" --title "$targetCommitMsg" --body "$PRbody" --assignee @nyakase --reviewer @nyakase --no-maintainer-edit
+          GH_TOKEN="$GHA_TOKEN" gh pr create --repo "$GITHUB_REPOSITORY" --title "$targetCommitMsg" --body "$PRbody" --assignee nyakase --reviewer nyakase --no-maintainer-edit
         fi
       fi
 
