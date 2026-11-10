@@ -16,6 +16,7 @@ stdenv.mkDerivation {
     repo = "linver";
     rev = "087f2746703d9c885de2e1a4f6360314283703f4";
     sha256 = "sha256-QeoXvKWuSCzH82krr6AnBpqwKFBhPaQiGEmy+N1Qz+g=";
+    forceFetchGit = true;
   };
 
   buildInputs = [ qt6.qtbase ];

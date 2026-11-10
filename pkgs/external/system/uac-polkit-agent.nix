@@ -14,6 +14,7 @@ stdenv.mkDerivation {
     repo = "uac-polkit-agent";
     rev = "5627680e94bf1d24769b1b0d25e21679e269d9b6";
     hash = "sha256-0YfvSjWDB//lGeyzqlBoVyqpt5affp1rIU5xsgn2vLs=";
+    forceFetchGit = true;
   };
   version = "2026-10-16";
 

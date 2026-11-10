@@ -32,6 +32,7 @@
               repo = "aeroshell-kwin-components";
               rev = "4a28963f1f751e93350e86e2b5bf1afb5380fcd6";
               hash = "sha256-KqqYOZxzxpN8nj0uMw28vEJI8phw3sO/we3rGZG5Edk=";
+              forceFetchGit = true;
             };
             aeroshell-smod-repo = pkgs.fetchFromGitLab {
               domain = "gitgud.io";
@@ -39,6 +40,7 @@
               repo = "smod";
               rev = "67e24c0212a955a8684701cdde05c27215618e7b";
               hash = "sha256-bPF42Y6WhyMT/l8ENh9tXFSWfSbD/CCN6yx7RGukw4Y=";
+              forceFetchGit = true;
             };
             aeroshell-workspace-repo = pkgs.fetchFromGitLab {
               domain = "gitgud.io";
@@ -46,6 +48,7 @@
               repo = "aeroshell-workspace";
               rev = "abb45d8d00e128e2cb85ec608161ad498abd3a20";
               hash = "sha256-OZHDjT1s732wmlEeyvAjG1D+zWjz9O6lGYVhZlPfKBw=";
+              forceFetchGit = true;
             };
             aerothemeplasma-icons-repo = pkgs.fetchFromGitLab {
               domain = "gitgud.io";
@@ -53,6 +56,7 @@
               repo = "atp/aerothemeplasma-icons";
               rev = "0100536bb0fb4b731b6cf776f3bc6dc5d3c74bfc";
               hash = "sha256-5tB52/IYB4oz3Zn3TPcSWLfdCLvYLRqxshbGzZyPHzE=";
+              forceFetchGit = true;
             };
             aerothemeplasma-repo = pkgs.fetchFromGitLab {
               domain = "gitgud.io";
@@ -60,6 +64,7 @@
               repo = "atp/aerothemeplasma";
               rev = "c4a82b5c32338081676958cfb05815aa713ea6c5";
               hash = "sha256-GA0DV0mwO//TPZrCgHO3E5m1dVcnIrZEmd/QmxDesfU=";
+              forceFetchGit = true;
             };
 
             libplasma = self.callPackage ./pkgs/aeroshell/hacks/libplasma.nix {};

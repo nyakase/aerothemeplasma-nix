@@ -1,16 +1,19 @@
 {
   kdePackages,
-  fetchFromGitHub,
+  fetchFromGitLab,
   fetchzip,
   runCommand,
-  diffutils
+  diffutils,
+  lib
 }:
 let
-  patch-source = fetchFromGitHub {
-    owner = "aeroshell-desktop";
+  patch-source = fetchFromGitLab {
+    domain = "gitgud.io";
+    owner = "aeroshell";
     repo = "libplasma";
     rev = "c962fb360e5b8288b274a5294c14e8125c02aba0";
     hash = "sha256-5rqTtJArFdTrN9nzaCpQmDLkPbhBTHFVX9PdhfXKfJ4=";
+    forceFetchGit = true;
   };
   patch-target = fetchzip {
     url = "mirror://kde/stable/plasma/6.8.2/libplasma-6.8.2.tar.xz";

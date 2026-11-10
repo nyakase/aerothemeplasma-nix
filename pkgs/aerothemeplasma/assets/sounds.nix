@@ -13,6 +13,7 @@ stdenvNoCC.mkDerivation {
     repo = "atp/aerothemeplasma-sounds";
     rev = "55d2f5fd15f53cccbbb13388941b930442db1159";
     hash = "sha256-z73owMl2+mAQJKGgjuJAmPIYOYuoVug0nWZ3WqWY0DY=";
+    forceFetchGit = true;
   };
 
   # not using upstream's CMakeLists here because.. it's just files

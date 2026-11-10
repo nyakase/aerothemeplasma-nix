@@ -17,6 +17,7 @@ stdenv.mkDerivation {
     repo = "aero-glass-pane";
     rev = "a976b1e0498cde890e2b4f042c4b0567a890b4bb";
     hash = "sha256-Yo3vlrLfnBheHnwGfIBSCfhOOAqZxcAtcpgKC6Zvv0w=";
+    forceFetchGit = true;
   };
 
   buildInputs = [ qt6.qtbase kdePackages.kwindowsystem ];
