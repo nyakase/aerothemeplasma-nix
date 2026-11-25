@@ -10,18 +10,18 @@ kdePackages.plasma-workspace.overrideAttrs (oldAttrs: {
     (lib.cmakeFeature "Plasma_DIR" "${libplasma.dev}/lib/cmake/Plasma")
     (lib.cmakeFeature "PlasmaQuick_DIR" "${libplasma.dev}/lib/cmake/PlasmaQuick")
   ];
-  ninjaFlags = [ "plasmashell" "kworkspace" ];
+  ninjaFlags = [ "plasmashell" ];
 
   postPatch = ''
-    # rename plasmashell and kworkspace
+    # rename plasmashell
     echo "set_target_properties(plasmashell PROPERTIES OUTPUT_NAME aeroshell)" >> CMakeLists.txt
-    echo "set_target_properties(kworkspace PROPERTIES OUTPUT_NAME atp-kworkspace)" >> CMakeLists.txt
     substituteInPlace shell/plasma-plasmashell.service.in \
       --replace-fail "BINDIR@/plasmashell" "BINDIR@/aeroshell"
 
     # stuff providable by main plasma-workspace
-    sed -i "/kconf_update/d" shell/CMakeLists.txt
-    sed -i "/DBUSINTERFACE/d" shell/CMakeLists.txt
+    sed -i "/kconf_update/d; /DBUSINTERFACE/d" shell/CMakeLists.txt
+    substituteInPlace shell/CMakeLists.txt --replace-fail "PW::KWorkspace" "${kdePackages.plasma-workspace}/lib/libkworkspace6.so"
+    echo 'target_include_directories(plasmashell PRIVATE "${kdePackages.plasma-workspace.dev}/include/kworkspace6")' >> CMakeLists.txt
 
     # rename the plasmashell service
     mv shell/plasma-plasmashell.service.in shell/plasma-aeroshell.service.in
@@ -44,8 +44,8 @@ kdePackages.plasma-workspace.overrideAttrs (oldAttrs: {
   '';
   installPhase = ''
     runHook preInstall
-    ninja shell/install libkworkspace/install
-    rm -rf $out/lib/qt-6
+    ninja shell/install
+    rm -rf $out/lib
     
     # drop-ins to make startplasma prefer aeroshell over plasmashell in the theme's login session
     mkdir -p $out/share/systemd/user/plasma-{core.target,plasmashell.service,aeroshell.service}.d
